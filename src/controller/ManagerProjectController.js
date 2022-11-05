@@ -12,19 +12,26 @@ module.exports = {
       const projectName = [firstLetter, ...letters].join('');
 
       return projectName;
-    }).join('');
+    }).join('').normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
     return `${name}.json`;
 
   },
 
   checkingProjectName(fileName) {
-    const fileList = fs.readdirSync(`${pathDir}`);
-
+    const fileList = this.getAllProjectsName();
     return fileList.includes(`${fileName}`);
+  },
+
+  getAllProjectsName() {
+    return fs.readdirSync(`${pathDir}`)
   },
 
   createProjectFile(project) {
     fs.writeFileSync(`${pathDir}/${project.file}`, JSON.stringify(project));
+  },
+
+  getProjectInfo(fileName) {
+    return fs.readFileSync(`${pathDir}/${fileName}`, 'utf-8');
   }
 };

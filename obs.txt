@@ -1,1 +1,2 @@
 corrigir CreateProjectController.js linha 20 -> tratativa de erro;
+corrigir ProjectoController.js linha 14 -> retornar os dados para o front
