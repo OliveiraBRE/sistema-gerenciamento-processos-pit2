@@ -14,7 +14,7 @@ module.exports = {
       file: projectName,
       init: initDate,
       deadLine: deadLine,
-      ativo: true,
+      status: active, /* conclued, deprecated*/
       cards:[]
     };
 
