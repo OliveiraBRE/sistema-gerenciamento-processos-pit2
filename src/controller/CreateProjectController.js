@@ -6,15 +6,13 @@ module.exports = {
     const projectName = manager.buildingProjectFileName(name);
     const projectId = manager.getAllProjectsName().length + 1;
 
-    console.log(projectId);
-
     const project = {
       id: projectId,
       name: name,
       file: projectName,
       init: initDate,
       deadLine: deadLine,
-      status: active, /* conclued, deprecated*/
+      status: "active", /* conclued, deprecated*/
       cards:[]
     };
 
