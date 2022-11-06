@@ -17,9 +17,9 @@ module.exports = {
     return JSON.parse(project);
   },
 
-  // updateProject(project) {
-  //   projectManager.createProjectFile(project);
-  // },
+  updateProject(project) {
+    projectManager.createProjectFile(project);
+  },
 
   updateCardProject(project) {
     const { projectName, id, cardStatus } = project;
