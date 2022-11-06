@@ -8,13 +8,13 @@ module.exports = {
     res.json(currentProject);
   },
 
-  createNewCard(req, res) {
-    const {projectName} = req.params;
+  newCard(req, res) {
+    const { projectName } = req.params;
     const card = req.body;
     const currentProject = cardManager.getCards(`${projectName}.json`);
 
     const newCard = {
-      cardId: currentProject.cards.length+1,
+      cardId: currentProject.cards.length + 1,
       title: card.title,
       manager: card.manager,
       description: card.description,
@@ -22,10 +22,30 @@ module.exports = {
     }
 
     currentProject.cards.push(newCard);
-    cardManager.setNewCard(currentProject);
+    cardManager.updateProject(currentProject);
+    res.status(200).json({ message: "Atualização realizada com sucesso" });
+  },
 
-    res.status(200).json({message:"Gravado com sucesso"});
+  setCardStatus(req, res) {
+    const currentProject = {
+      projectName: req.params.projectName,
+      id: req.params.id,
+      cardStatus: req.body.cardStatus
+    };
 
+    cardManager.updateCardProject(currentProject);
+    res.status(200).json({ message: "Atualização realizada com sucesso" });
+  },
+
+  deleteCard(req, res){
+    const currentProject = {
+      projectName: req.params.projectName,
+      id: req.params.id,
+      cardStatus: "deleted"
+    };
+
+    cardManager.updateCardProject(currentProject);
+    res.status(200).json({ message: "Atualização realizada com sucesso" });
   }
 }
 
