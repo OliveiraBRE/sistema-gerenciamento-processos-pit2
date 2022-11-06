@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const route = require('./routes/routes');
-const createProjectRoute = require('./routes/createProjectRoute');
+const createProjectRoute = require('./routes/projectRoute');
 
 const app = express();
 
