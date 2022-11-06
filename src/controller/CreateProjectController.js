@@ -4,7 +4,7 @@ module.exports = {
   creatingNewProject(req, res) {
     const { name, initDate, deadLine } = req.body;
     const projectName = manager.buildingProjectFileName(name);
-    const projectId = manager.getAllProjectsName().length + 1;
+    const projectId = manager.getAllProjects().length + 1;
 
     const project = {
       id: projectId,

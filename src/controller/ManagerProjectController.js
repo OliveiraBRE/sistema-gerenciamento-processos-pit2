@@ -14,11 +14,11 @@ module.exports = {
   },
 
   checkingProjectName(fileName) {
-    const fileList = this.getAllProjectsName();
+    const fileList = this.getAllProjects();
     return fileList.includes(`${fileName}`);
   },
 
-  getAllProjectsName() {
+  getAllProjects() {
     return fs.readdirSync(`${pathDir}`)
   },
 

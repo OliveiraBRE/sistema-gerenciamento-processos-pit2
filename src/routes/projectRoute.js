@@ -1,6 +1,6 @@
-const createProjectRoute = require('express').Router();
+const projectRoute = require('express').Router();
 const newProject = require('../controller/CreateProjectController');
 
-createProjectRoute.post('/', newProject.creatingNewProject);
+projectRoute.post('/', newProject.creatingNewProject);
 
-module.exports = createProjectRoute;
+module.exports = projectRoute;

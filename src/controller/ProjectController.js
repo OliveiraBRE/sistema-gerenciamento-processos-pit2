@@ -1,11 +1,11 @@
-const manager = require('./ManagerProjectController');
+const projectManager = require('./ManagerProjectController');
 
 module.exports = {
   getAllProjects(_, res){
-    const projects = manager.getAllProjectsName();
+    const projects = projectManager.getAllProjects();
 
     const projectsNames = projects.map(file => {
-      const projectInfo = manager.getProjectInfo(file);
+      const projectInfo = projectManager.getProjectInfo(file);
 
       const {id, name: projectName} = JSON.parse(projectInfo);
       return {id, projectName};
