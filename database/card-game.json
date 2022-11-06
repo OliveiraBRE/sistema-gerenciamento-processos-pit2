@@ -1,17 +1,1 @@
-{
-  "id": 1,
-  "name": "Card Game",
-  "file": "card-game.json",
-  "init": "05/11/2022",
-  "deadLine": "20/11/2022",
-  "status": "active",
-  "cards": [
-    {
-      "id": 1,
-      "title": "some title",
-      "manager": "Bruno",
-      "description": "short text to descript this card",
-      "status": "backlog"
-    }
-  ]
-}
+{"id":1,"name":"Card Game","file":"card-game.json","init":"05/11/2022","deadLine":"20/11/2022","status":"active","cards":[{"cardId":1,"title":"bolo de coco","manager":"Bruno","description":"a verdadeira toalha felpuda","status":"backlog"},{"cardId":2,"title":"bolo de coco","manager":"Bruno","description":"a verdadeira toalha felpuda","status":"backlog"},{"cardId":3,"title":"bolo de coco","manager":"Bruno","description":"a verdadeira toalha felpuda","status":"backlog"}]}

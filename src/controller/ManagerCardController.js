@@ -12,8 +12,12 @@ module.exports = {
     return filteredProject[0];
   },
 
-  getCardList(fileName){
+  getCards(fileName){
     const project = projectManager.getProjectInfo(fileName);
     return JSON.parse(project);
+  },
+
+  setNewCard(project) {
+    projectManager.createProjectFile(project);
   }
 }

@@ -6,7 +6,7 @@ module.exports = {
   buildingProjectFileName(projectName) {
     const name = projectName
       .toLowerCase()
-      .replace(' ', '-')
+      .replaceAll(' ', '-')
       .normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
     return `${name}.json`;
