@@ -23,7 +23,7 @@ module.exports = {
   },
 
   createProjectFile(project) {
-    fs.writeFileSync(`${pathDir}/${project.file}`, JSON.stringify(project));
+    fs.writeFileSync(`${pathDir}/${project.file}`, JSON.stringify(project, null, 2));
   },
 
   getProjectInfo(fileName) {

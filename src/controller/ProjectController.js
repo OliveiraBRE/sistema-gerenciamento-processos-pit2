@@ -11,7 +11,7 @@ module.exports = {
       return {id, projectName};
     });
 
-    res.send(projectsNames.sort((a, b) => {
+    res.json(projectsNames.sort((a, b) => {
       return a.id -b.id;
     }));
   }
